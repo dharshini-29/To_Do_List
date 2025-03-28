@@ -1,5 +1,5 @@
 # Ex03 To-Do List using JavaScript
-## Date:
+## Date:28/03/25
 ## Name-K DHARSHINI
 ## Ref no-212223220017
 ## AIM
@@ -41,48 +41,39 @@ Upload to GitHub Pages for free hosting.
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Todo Application</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            min-height: 100vh;
+            padding: 0;
+            background-color: #f3e5f5; /* Light pastel purple */
+            text-align: center;
         }
         header, footer {
-            text-align: center;
-            padding: 15px;
-            background-color: #007acc;
+            background-color: #b39ddb; /* Soft pastel purple */
             color: white;
-            border-radius: 10px;
-            width: 80%;
-            max-width: 600px;
-            font-size: 16px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            padding: 15px;
+            font-size: 20px;
+            font-weight: bold;
         }
         .todo-container {
-            max-width: 600px;
-            width: 80%;
-            margin: 20px auto;
-            padding: 25px;
-            background-color: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            background: white;
+            margin: 30px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 2px solid #b39ddb;
         }
         .todo-input {
             width: 100%;
-            padding: 14px;
-            margin-bottom: 15px;
-            border: 2px solid #007acc;
-            border-radius: 6px;
-            font-size: 18px;
-            background-color: #f9f9f9;
-            color: #333;
+            padding: 10px;
+            border: 2px solid #b39ddb;
+            border-radius: 4px;
+            margin-bottom: 10px;
         }
         .todo-list {
             list-style: none;
@@ -92,56 +83,40 @@ Upload to GitHub Pages for free hosting.
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 14px;
-            margin-bottom: 10px;
-            background-color: #e3f2fd;
-            border: 2px solid #007acc;
-            border-radius: 8px;
-            font-size: 18px;
+            padding: 10px;
+            margin-bottom: 5px;
+            background-color: #f3e5f5;
+            border: 1px solid #ddd;
+            border-radius: 4px;
         }
-        .todo-item.completed {
+        .todo-item.completed span {
             text-decoration: line-through;
             color: gray;
         }
         .todo-buttons button {
-            padding: 8px 14px;
+            padding: 5px 10px;
             border: none;
-            border-radius: 6px;
+            border-radius: 4px;
             cursor: pointer;
-            font-size: 14px;
-            transition: background 0.3s;
         }
-        .todo-buttons button:first-child {
-            background-color: #28a745;
+        .complete-btn {
+            background-color: #9575cd; /* Softer purple */
             color: white;
         }
-        .todo-buttons button:first-child:hover {
-            background-color: #218838;
-        }
-        .todo-buttons button:last-child {
-            background-color: #dc3545;
+        .delete-btn {
+            background-color: #f48fb1; /* Soft pink for contrast */
             color: white;
-        }
-        .todo-buttons button:last-child:hover {
-            background-color: #c82333;
         }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Todo Application</h1>
-    </header>
-
+    <header>Todo Application</header>
     <div class="todo-container">
-        <h2>Your Tasks</h2>
+        <h2>To-Do List ✅</h2>
         <input type="text" id="todo-input" class="todo-input" placeholder="Add a new task">
         <ul id="todo-list" class="todo-list"></ul>
     </div>
-
-    <footer>
-        <p>&copy; 2025. All rights reserved by 212223040236.</p>
-    </footer>
-
+    <footer>&copy; 2025 Dharshini K (212223220017) | All rights reserved.</footer>
     <script>
         const todoInput = document.getElementById('todo-input');
         const todoList = document.getElementById('todo-list');
@@ -161,12 +136,14 @@ Upload to GitHub Pages for free hosting.
 
             const completeBtn = document.createElement('button');
             completeBtn.textContent = 'Complete';
+            completeBtn.className = 'complete-btn';
             completeBtn.onclick = () => {
                 li.classList.toggle('completed');
             };
 
             const deleteBtn = document.createElement('button');
             deleteBtn.textContent = 'Delete';
+            deleteBtn.className = 'delete-btn';
             deleteBtn.onclick = () => {
                 todoList.removeChild(li);
             };
@@ -189,11 +166,11 @@ Upload to GitHub Pages for free hosting.
     </script>
 </body>
 </html>
-
 ```
 
 ## OUTPUT
-![image](https://github.com/user-attachments/assets/3d069722-eba7-46e5-8053-df215e510ed5)
+![Screenshot 2025-03-28 193428](https://github.com/user-attachments/assets/a4ebeca5-dacc-483f-9d59-2726d363267a)
+
 
 
 ## RESULT
